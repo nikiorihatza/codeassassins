@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #222222;
+    --secondary-color: #007bff;
+    --accent-color: #ffc107;
+    --light-color: #ffffff;
+    --dark-color: #111111;
+}
+
+body {
+    font-family: Gilmer, sans-serif;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--dark-color);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+header a:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+/* Home Section Styles */
+#home {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+#home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#cta-button {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--light-color);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Contests and Events Section Styles */
+#contests-and-events {
+    padding: 20px;
+}
+
+#contests-and-events h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid var(--secondary-color);
+    color: var(--light-color);
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+/* About Us Section Styles */
+#about-us {
+    padding: 20px;
+}
+
+#about-us h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#about-us h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#about-us img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Contact Us Section Styles */
+#contact {
+    padding: 20px;
+}
+
+#contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#contact label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background-color: transparent; /* Set background color to transparent */
+    border: 2px solid var(--secondary-color); /* Blue border */
+    color: var(--light-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none; /* Remove outline on focus */
+    border-color: var(--accent-color); /* Change border color on focus */
+}
+
+#contact button {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--light-color);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact li a {
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* Social Media Icons Styling */
+.social-link svg {
+    width: 20%;
+    height: auto;
+}
+
+.social-media-list {
+    text-align: center;
+    background: #333333;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.social-media-list h3 {
+    padding-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--dark-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+footer p {
+    margin: 0;
+    color: var(--light-color);
+}
