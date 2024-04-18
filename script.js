@@ -1,17 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = function() {
+    const imgElement = document.querySelector('.img img');
+    imgElement.style.animation = 'moveUpDown 3s infinite';
+    typeWord();
+};
 
-    const checkbox = document.querySelector('input[type="checkbox"]');
+let words = ['Software Developer', 'Code Enthusiasts', 'Problem Solver', 'Competitive Programmers'];
+let wordIndex = 0;
+let charIndex = 0;
 
-    const setTheme = (isDarkMode) => {
-        const theme = isDarkMode ? 'dark' : 'light';
-        document.body.setAttribute('data-theme', theme);
-    };
+function typeWord() {
+    let currentWord = words[wordIndex];
+    let currentChar = currentWord.charAt(charIndex++);
+    document.querySelector('.home p span').textContent += currentChar;
 
-    checkbox.addEventListener('change', () => {
-        setTheme(checkbox.checked);
-        localStorage.setItem('theme', checkbox.checked ? 'dark' : 'light');
-    });
+    if(charIndex < currentWord.length) {
+        setTimeout(typeWord, 200);
+    } else {
+        setTimeout(deleteWord, 2000);
+    }
+}
 
-    const savedTheme = localStorage.getItem('theme');
-    setTheme(savedTheme === 'dark');
-});
+function deleteWord() {
+    let currentWord = words[wordIndex];
+    let currentText = document.querySelector('.home p span').textContent;
+    document.querySelector('.home p span').textContent = currentText.slice(0, -1);
+
+    if(currentText.length > 0) {
+        setTimeout(deleteWord, 100);
+    } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        charIndex = 0;
+        setTimeout(typeWord, 100);
+    }
+}
