@@ -169,3 +169,45 @@ body {
 li {
     margin: 10px 0;
 }
+
+.team h2 {
+    margin-bottom: 5rem;
+}
+
+.teamContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.teamContainer .teamMemberBox {
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.teamContainer .teamMemberBox:hover {
+    border-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.teamMemberBox i {
+    font-size: 4rem;
+    color: var(--hover-color);
+}
+
+.teamMemberBox h3 {
+    font-size: 2.6rem;
+}
+
+.teamMemberBox p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
