@@ -196,10 +196,12 @@ li {
 .teamContainer .teamMemberBox:hover {
     border-color: var(--hover-color);
     transform: scale(1.05);
+    box-shadow: 0 0 1rem var(--hover-color);
 }
 
 .teamMemberBox i {
-    font-size: 4rem;
+    font-size: 5rem;
+    margin-bottom: 20px;
     color: var(--hover-color);
 }
 
@@ -210,4 +212,8 @@ li {
 .teamMemberBox p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
+}
+
+.team .heading span {
+    color: var(--hover-color);
 }
