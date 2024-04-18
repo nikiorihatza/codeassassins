@@ -1,20 +1,36 @@
-:root {
+body[data-theme='light'] {
+    --primary-color: #ffffff;
+    --secondary-color: #007bff;
+    --accent-color: #ffc107;
+    --light-color: #222222;
+    --dark-color: #111111;
+    --section-color: #f8f8f8;
+    --button-text-color: #ffffff;
+}
+
+body[data-theme='dark'] {
     --primary-color: #222222;
     --secondary-color: #007bff;
     --accent-color: #ffc107;
     --light-color: #ffffff;
     --dark-color: #111111;
+    --section-color: #333333;
+    --button-text-color: #ffffff;
 }
 
+/* Global Styles */
 body {
     font-family: Gilmer, sans-serif;
     color: var(--light-color);
     background-color: var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header Styles */
 header {
-    background-color: var(--dark-color);
+    background-color: var(--secondary-color);
     padding: 10px;
     border-radius: 10px 10px 0 0;
 }
@@ -24,23 +40,25 @@ header ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 header a {
-    color: var(--light-color);
+    color: var(--button-text-color);
     text-decoration: none;
     padding: 5px;
     border-radius: 5px;
 }
 
 header a:hover {
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 /* Home Section Styles */
 #home {
-    background-image: url('hero-image.jpg');
+    background-image: url('assets/banner.jpg');
     background-size: cover;
     height: 400px;
     display: flex;
@@ -53,13 +71,14 @@ header a:hover {
 
 #home h1 {
     font-size: 48px;
+    color: white;
     margin-bottom: 20px;
 }
 
 #cta-button {
     background-color: var(--secondary-color);
     border: none;
-    color: var(--light-color);
+    color: var(--button-text-color);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -78,6 +97,7 @@ header a:hover {
 #contests-and-events h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    color: var(--secondary-color);
 }
 
 table {
@@ -106,6 +126,7 @@ th {
 #about-us h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    color: var(--secondary-color)
 }
 
 #about-us h3 {
@@ -144,8 +165,8 @@ th {
 input[type="text"],
 input[type="email"],
 textarea {
-    background-color: transparent; /* Set background color to transparent */
-    border: 2px solid var(--secondary-color); /* Blue border */
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
     color: var(--light-color);
     padding: 10px;
     margin-bottom: 10px;
@@ -155,14 +176,14 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    outline: none; /* Remove outline on focus */
-    border-color: var(--accent-color); /* Change border color on focus */
+    outline: none;
+    border-color: var(--accent-color);
 }
 
 #contact button {
     background-color: var(--secondary-color);
     border: none;
-    color: var(--light-color);
+    color: var(--button-text-color);
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -187,13 +208,14 @@ textarea:focus {
 
 /* Social Media Icons Styling */
 .social-link svg {
+    color: var(--secondary-color);
     width: 20%;
     height: auto;
 }
 
 .social-media-list {
     text-align: center;
-    background: #333333;
+    background: var(--section-color);
     padding-top: 20px;
     padding-bottom: 30px;
     margin-top: 40px;
@@ -207,7 +229,7 @@ textarea:focus {
 
 /* Footer Styles */
 footer {
-    background-color: var(--dark-color);
+    background-color: var(--secondary-color);
     padding: 10px;
     text-align: center;
     border-radius: 0 0 10px 10px;
@@ -216,4 +238,88 @@ footer {
 footer p {
     margin: 0;
     color: var(--light-color);
+}
+
+/* Dark Mode Toggle Switch Styles */
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.toggle-label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.checkbox:checked + .toggle-label {
+    background-color: rgba(24, 24, 24, 0.25); /* Change to your desired color for dark mode background */
+}
+
+.checkbox:checked + .toggle-label + .toggle-button {
+    transform: translateX(26px);
+}
+
+.bio {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--section-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bio h1 {
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.bio h2 {
+    color: var(--secondary-color);
+}
+
+.bio p {
+    line-height: 1.6;
+    color: var(--light-color);
+}
+
+.bio ol {
+    margin-left: 20px;
+}
+
+.bio ol li {
+    margin-bottom: 10px;
+}
+
+.bio strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+    color: #28a745;
 }

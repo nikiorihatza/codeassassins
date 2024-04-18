@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <title>CodeAssassins</title>
 </head>
 <body>
@@ -14,50 +15,79 @@
             <li><a href="#contests-and-events">CONTESTS AND EVENTS</a></li>
             <li><a href="#about-us">ABOUT US</a></li>
             <li><a href="#contact">CONTACT</a></li>
+            <li>
+                <div class="theme-switch">
+                    <input type="checkbox" id="toggle" class="checkbox" />
+                    <label for="toggle" class="toggle-label"></label>
+                    <div class="toggle-button"></div>
+                </div>
+
+            </li>
         </ul>
     </nav>
 </header>
 <main>
     <section id="home">
-        <h1>Catchy Tagline</h1>
-        <button id="cta-button">Call-to-Action</button>
+        <h1>One Community - One Passion</h1>
+        <button id="cta-button">Learn more</button>
     </section>
     <section id="contests-and-events">
-        <h2>Latest Contests and Events</h2>
+        <h2 style="text-align: center">Latest Contests and Events</h2>
         <table>
             <tr>
                 <th>Contest</th>
                 <th>Date</th>
                 <th>Location</th>
                 <th>Place</th>
-                <th>Registration Link</th>
             </tr>
             <tr>
-                <td>Contest 1</td>
-                <td>Date 1</td>
-                <td>Location 1</td>
-                <td>1st Place</td>
-                <td><a href="#">Registration Link 1</a></td>
+                <td>38th Classic CCC</td>
+                <td>20.10.2023</td>
+                <td>St.Pölten</td>
+                <td>1st</td>
             </tr>
             <tr>
-                <td>Contest 2</td>
-                <td>Date 2</td>
-                <td>Location 2</td>
-                <td>2nd Place</td>
-                <td><a href="#">Registration Link 2</a></td>
+                <td>37th Classic CCC</td>
+                <td>31.03.2023</td>
+                <td>St.Pölten</td>
+                <td>12th</td>
             </tr>
             <tr>
-                <td>Contest 3</td>
-                <td>Date 3</td>
-                <td>Location 3</td>
-                <td>3rd Place</td>
-                <td><a href="#">Registration Link 3</a></td>
+                <td>37th School CCC</td>
+                <td>31.03.2023</td>
+                <td>St.Pölten</td>
+                <td>18th</td>
+            </tr>
+            <tr>
+                <td>36th School CCC</td>
+                <td>11.11.2022</td>
+                <td>St.Pölten</td>
+                   <td>9th</td>
             </tr>
         </table>
     </section>
     <section id="about-us">
-        <h2>About CodeAssassins</h2>
-        <p>Brief history and mission statement.</p>
+        <h2  style="text-align: center">About CodeAssassins</h2>
+        <div class="bio">
+            <p>CodeAssassins is a dynamic and ambitious organization dedicated to fostering excellence in competitive programming and software development. Founded in 2022, our mission is to cultivate a community of passionate coders and empower them to excel in the world of competitive coding.</p>
+
+            <p>At CodeAssassins, we believe in the transformative power of coding challenges and competitions. Our organization provides a platform for individuals to enhance their problem-solving skills, algorithmic thinking, and programming proficiency. We host regular coding contests, workshops, and training sessions designed to sharpen participants' abilities and prepare them for competitive coding at the highest levels.</p>
+
+            <h2>Our Objectives</h2>
+            <ol>
+                <li><strong>Skill Development:</strong> We are committed to nurturing talent and enhancing the coding abilities of our members.</li>
+                <li><strong>Community Building:</strong> CodeAssassins is more than just a coding organization; it's a vibrant community.</li>
+                <li><strong>Competitive Excellence:</strong> Our ultimate goal is to produce competitive coders who can excel in prestigious programming contests and hackathons globally.</li>
+                <li><strong>Innovation and Creativity:</strong> Beyond competitive programming, we inspire innovation and creativity in software development.</li>
+            </ol>
+
+            <p>As an organization, CodeAssassins is driven by a passion for coding and a commitment to continuous improvement. We strive to create an inclusive and supportive environment where individuals can push their boundaries, learn from each other, and achieve remarkable feats in the realm of competitive coding.</p>
+
+            <p>Join us on this exhilarating journey of exploration, learning, and growth. Whether you are a seasoned coder or a beginner eager to dive into the world of algorithms, there's a place for you at CodeAssassins. Together, let's sharpen our skills, unlock our potential, and conquer new coding horizons.</p>
+
+            <p><em>Unlock the code to success with CodeAssassins!</em></p>
+
+        </div>
         <h3>Our Team</h3>
         <ul>
             <li>
@@ -78,7 +108,7 @@
         </ul>
     </section>
     <section id="contact">
-        <h2>Contact Us</h2>
+        <h2 style="text-align: center">Contact Us</h2>
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
@@ -88,7 +118,7 @@
             <textarea id="message" name="message"></textarea>
             <button type="submit">Send</button>
         </form>
-        <p>Email: info@codeassassins.com</p>
+        <p>Email: info@codeassassins.org</p>
         <div class="social-media-list">
             <h3>SOCIAL MEDIA</h3>
             <ul>
